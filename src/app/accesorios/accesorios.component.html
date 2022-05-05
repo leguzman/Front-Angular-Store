@@ -1,0 +1,13 @@
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+    <div *ngFor="let item of ropa" class="card" style="width: 200px; margin: 5px;">
+        <div class="container">
+          <h4><b>{{item.nombre}}</b></h4> 
+          <p>{{item.tipo}}</p> 
+          <p>{{item.color}}</p>
+          <p>{{item.subtipo}}</p>
+          <p><b>{{item.precio}}</b></p>
+        </div>
+      </div>
+   
+</div>

@@ -1,0 +1,60 @@
+ <div class="container">
+
+  
+   <div
+    style="
+    min-width:300px;
+    "
+    >
+    <p style="font-size: 15px; font-weight: 500; color: #2c4772;">LOREM IPSUM DOLOR SIT</p>
+    <form action="submit" [formGroup]="FormGroup"
+    style="display: grid;"
+    >
+        <input formControlName="email" type="email" id="em" name="email" placeholder="Email">
+        <div
+        *ngIf="FormGroup.get('email')?.invalid && guardarPressed"
+        class="error"
+      >
+        <label>email es inválido.</label>
+      </div>
+        <input maxlength = 10 formControlName="celular" type="number" id="cel" name="celular" placeholder="Celular">
+        <div
+        *ngIf="FormGroup.get('celular')?.invalid && guardarPressed"
+        class="error"
+      >
+        <label>Numero celular es inválido.</label>
+      </div>
+        <input formControlName="ciudad" type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+        <div
+        *ngIf="FormGroup.get('ciudad')?.invalid && guardarPressed"
+        class="error"
+      >
+        <label>Ciudad es inválido.</label>
+      </div>
+
+        <button
+        (click)="create()"
+        style="background-color: #2c4772;
+        align-self: end;
+        justify-self: end;
+        color: white;
+        display: flex;
+        font-size: 20px;
+        font-weight: 100;
+        width: 126px;
+        border:none;
+        justify-content: center;
+        padding: 4px 0;
+        margin: 10px"
+        >ENVIAR
+        </button>
+    </form>
+    </div>
+    <div
+    style="
+    min-width: 300px;
+    "
+    >    
+    <img width="100%" src="../assets/imagen.png" alt="logo">
+    </div>
+</div> 
